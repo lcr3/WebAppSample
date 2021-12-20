@@ -28,21 +28,9 @@ var package = Package(
 
 // MARK: - Test Targets
 
-//package.targets.append(contentsOf: [
-//    .testTarget(
-//        name: "SeedFeatureTests",
-//        dependencies: ["SeedFeature"]
-//    ),
-//    .testTarget(
-//        name: "CreateDairyFeatureTests",
-//        dependencies: ["CreateDairyFeature", "Component"]
-//    ),
-//    .testTarget(
-//        name: "DiaryDetailFeatureTests",
-//        dependencies: ["DiaryDetailFeature"]
-//    ),
-//    .testTarget(
-//        name: "SettingFeatureTests",
-//        dependencies: ["SettingFeature"]
-//    ),
-//])
+package.targets.append(contentsOf: [
+    .testTarget(
+        name: "TopPageFeatureTests",
+        dependencies: ["TopPageFeature"]
+    ),
+])

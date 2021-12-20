@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3CD7962770B3A700C28C79 /* TopPageFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3CD7952770B3A700C28C79 /* TopPageFeature */; };
 		0F6CF861277097B4000D0051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CF85F277097B4000D0051 /* Preview Assets.xcassets */; };
 		0F6CF862277097B4000D0051 /* WebAppSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6CF860277097B4000D0051 /* WebAppSample.swift */; };
 		0F6CF864277097BE000D0051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CF863277097BE000D0051 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3CD7962770B3A700C28C79 /* TopPageFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3CD7942770B3A700C28C79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0F6CF82827709756000D0051 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +79,7 @@
 				0F6CF863277097BE000D0051 /* Assets.xcassets */,
 				0F6CF85E277097B4000D0051 /* Preview Content */,
 				0F6CF83227709756000D0051 /* Products */,
+				0F3CD7942770B3A700C28C79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +118,9 @@
 			dependencies = (
 			);
 			name = Production;
+			packageProductDependencies = (
+				0F3CD7952770B3A700C28C79 /* TopPageFeature */,
+			);
 			productName = Production;
 			productReference = 0F6CF83127709756000D0051 /* WebAppSample.app */;
 			productType = "com.apple.product-type.application";
@@ -570,6 +583,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F3CD7952770B3A700C28C79 /* TopPageFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TopPageFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F6CF82927709756000D0051 /* Project object */;
 }

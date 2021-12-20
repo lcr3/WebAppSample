@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import TopPageFeature
 
 @main
 struct WebAppSample: App {
     var body: some Scene {
         WindowGroup {
+            TopPageView()
         }
     }
 }

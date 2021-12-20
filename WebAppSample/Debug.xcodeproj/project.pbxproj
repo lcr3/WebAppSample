@@ -70,6 +70,7 @@
 				0F6CF826277096AC000D0051 /* Assets.xcassets */,
 				0F6CF81D27709585000D0051 /* Preview Content */,
 				0F6CF7E727709495000D0051 /* Products */,
+				0F6CF86527709CC6000D0051 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +91,13 @@
 			);
 			name = "Preview Content";
 			path = "iOS/Preview Content";
+			sourceTree = "<group>";
+		};
+		0F6CF86527709CC6000D0051 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

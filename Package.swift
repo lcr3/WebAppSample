@@ -8,10 +8,21 @@ var package = Package(
         .iOS(.v15),
     ],
     products: [
+        .library(
+            name: "TopPageFeature",
+            targets: [
+                "TopPageFeature",
+            ]
+        )
     ],
     dependencies: [
     ],
     targets: [
+        .target(
+            name: "TopPageFeature",
+            dependencies: [
+            ]
+        )
     ]
 )
 

@@ -9,8 +9,12 @@ import SwiftUI
 import WebViewKit
 
 public struct TopPageView: View {
-    @ObservedObject var stateModel = WebViewStateModel(url: "https://apple.com")
-    public init() {}
+    @ObservedObject var stateModel: WebViewStateModel
+
+    public init(url: String) {
+        self.stateModel = WebViewStateModel(url: url)
+    }
+
     public var body: some View {
         NavigationView {
             ZStack {

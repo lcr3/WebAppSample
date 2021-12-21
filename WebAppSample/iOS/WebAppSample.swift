@@ -12,7 +12,7 @@ import TopPageFeature
 struct WebAppSample: App {
     var body: some Scene {
         WindowGroup {
-            TopPageView()
+            TopPageView(url: "https://apple.com")
         }
     }
 }

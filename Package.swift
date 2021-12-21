@@ -46,5 +46,9 @@ package.targets.append(
             name: "TopPageFeatureTests",
             dependencies: ["TopPageFeature"]
         ),
+        .testTarget(
+            name: "WebViewKitTests",
+            dependencies: ["WebViewKit"]
+        )
     ]
 )

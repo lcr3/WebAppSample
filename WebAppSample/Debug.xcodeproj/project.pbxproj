@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F3CD7992770C49B00C28C79 /* WebViewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3CD7982770C49B00C28C79 /* WebViewKit */; };
+		0F3CD79D2771874A00C28C79 /* TopPageFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3CD79C2771874A00C28C79 /* TopPageFeature */; };
 		0F6CF82227709585000D0051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CF81E27709585000D0051 /* Preview Assets.xcassets */; };
 		0F6CF82327709585000D0051 /* WebAppSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6CF81F27709585000D0051 /* WebAppSample.swift */; };
 		0F6CF827277096AC000D0051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CF826277096AC000D0051 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3CD79D2771874A00C28C79 /* TopPageFeature in Frameworks */,
 				0F3CD7992770C49B00C28C79 /* WebViewKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +122,7 @@
 			name = Debug;
 			packageProductDependencies = (
 				0F3CD7982770C49B00C28C79 /* WebViewKit */,
+				0F3CD79C2771874A00C28C79 /* TopPageFeature */,
 			);
 			productName = Debug;
 			productReference = 0F6CF7E627709495000D0051 /* WebAppSample.app */;
@@ -588,6 +591,10 @@
 		0F3CD7982770C49B00C28C79 /* WebViewKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WebViewKit;
+		};
+		0F3CD79C2771874A00C28C79 /* TopPageFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TopPageFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

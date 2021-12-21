@@ -6,10 +6,36 @@
 //
 
 import SwiftUI
+import WebViewKit
 
 public struct TopPageView: View {
+    @ObservedObject var stateModel = WebViewStateModel(url: "https://apple.com")
     public init() {}
     public var body: some View {
-        Text("TopPageView")
+        NavigationView {
+            ZStack {
+                WebViewContainer(stateModel: stateModel)
+                if stateModel.isLoading {
+                    ProgressView()
+                }
+            }
+            .navigationBarTitle(Text(stateModel.title), displayMode: .inline)
+            .navigationBarItems(
+                leading: Button(action: {
+                    stateModel.shouldGoBack = true
+                }) {
+                    if stateModel.canGoBack {
+                        Text("<Back")
+                    } else {
+                        EmptyView()
+                    }
+                },
+                trailing: Button(action: {
+                    stateModel.load("https://google.com")
+                }) {
+                    Text("Google")
+                }
+            )
+        }
     }
 }

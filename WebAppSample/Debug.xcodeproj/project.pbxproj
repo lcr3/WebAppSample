@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F3CD7932770B2B000C28C79 /* TopPageFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3CD7922770B2B000C28C79 /* TopPageFeature */; };
+		0F3CD7992770C49B00C28C79 /* WebViewKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3CD7982770C49B00C28C79 /* WebViewKit */; };
 		0F6CF82227709585000D0051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CF81E27709585000D0051 /* Preview Assets.xcassets */; };
 		0F6CF82327709585000D0051 /* WebAppSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6CF81F27709585000D0051 /* WebAppSample.swift */; };
 		0F6CF827277096AC000D0051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6CF826277096AC000D0051 /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F3CD7932770B2B000C28C79 /* TopPageFeature in Frameworks */,
+				0F3CD7992770C49B00C28C79 /* WebViewKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3CD7972770C49B00C28C79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0F6CF7DD27709495000D0051 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +79,7 @@
 				0F6CF826277096AC000D0051 /* Assets.xcassets */,
 				0F6CF81D27709585000D0051 /* Preview Content */,
 				0F6CF7E727709495000D0051 /* Products */,
+				0F3CD7972770C49B00C28C79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +119,7 @@
 			);
 			name = Debug;
 			packageProductDependencies = (
-				0F3CD7922770B2B000C28C79 /* TopPageFeature */,
+				0F3CD7982770C49B00C28C79 /* WebViewKit */,
 			);
 			productName = Debug;
 			productReference = 0F6CF7E627709495000D0051 /* WebAppSample.app */;
@@ -577,9 +585,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0F3CD7922770B2B000C28C79 /* TopPageFeature */ = {
+		0F3CD7982770C49B00C28C79 /* WebViewKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TopPageFeature;
+			productName = WebViewKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

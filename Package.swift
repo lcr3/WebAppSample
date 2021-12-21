@@ -13,6 +13,12 @@ var package = Package(
             targets: [
                 "TopPageFeature",
             ]
+        ),
+        .library(
+            name: "WebViewKit",
+            targets: [
+                "WebViewKit",
+            ]
         )
     ],
     dependencies: [
@@ -21,16 +27,24 @@ var package = Package(
         .target(
             name: "TopPageFeature",
             dependencies: [
+                .target(name: "WebViewKit"),
             ]
-        )
+        ),
+        .target(
+            name: "WebViewKit",
+            dependencies: [
+            ]
+        ),
     ]
 )
 
 // MARK: - Test Targets
 
-package.targets.append(contentsOf: [
-    .testTarget(
-        name: "TopPageFeatureTests",
-        dependencies: ["TopPageFeature"]
-    ),
-])
+package.targets.append(
+    contentsOf: [
+        .testTarget(
+            name: "TopPageFeatureTests",
+            dependencies: ["TopPageFeature"]
+        ),
+    ]
+)

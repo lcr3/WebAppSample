@@ -83,7 +83,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 # firebase
-# GoogleService-Info.plist
+*GoogleService-Info.plist
 
 # rbenv
 .ruby-version

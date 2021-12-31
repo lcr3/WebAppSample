@@ -17,7 +17,7 @@ struct WebAppSample: App {
 
     var body: some Scene {
         WindowGroup {
-            TopPageView(url: "https://apple.com")
+            TopPageView()
         }
     }
 }

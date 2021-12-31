@@ -22,12 +22,17 @@ var package = Package(
         )
     ],
     dependencies: [
+        .package(
+            url: "https://github.com/kylehickinson/SwiftUI-WebView.git",
+            .exact("0.3.0")
+        )
     ],
     targets: [
         .target(
             name: "TopPageFeature",
             dependencies: [
-                .target(name: "WebViewKit"),
+//                .target(name: "WebViewKit"),
+                .product(name: "WebView", package: "SwiftUI-WebView"),
             ]
         ),
         .target(

@@ -11,8 +11,8 @@ import WebViewKit
 public struct TopPageView: View {
     @ObservedObject var stateModel: WebViewStateModel
 
-    public init(url: String) {
-        self.stateModel = WebViewStateModel(url: url)
+    public init(defaultUrl: String) {
+        self.stateModel = WebViewStateModel(url: defaultUrl)
     }
 
     public var body: some View {

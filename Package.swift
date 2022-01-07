@@ -15,6 +15,12 @@ var package = Package(
             ]
         ),
         .library(
+            name: "NotificationPageFeature",
+            targets: [
+                "NotificationPageFeature"
+            ]
+        ),
+        .library(
             name: "WebViewKit",
             targets: [
                 "WebViewKit",
@@ -28,6 +34,11 @@ var package = Package(
             name: "TopPageFeature",
             dependencies: [
                 .target(name: "WebViewKit"),
+            ]
+        ),
+        .target(
+            name: "NotificationPageFeature",
+            dependencies: [
             ]
         ),
         .target(

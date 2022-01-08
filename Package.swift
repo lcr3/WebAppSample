@@ -21,6 +21,12 @@ var package = Package(
             ]
         ),
         .library(
+            name: "ScreenCoordinator",
+            targets: [
+                "ScreenCoordinator"
+            ]
+        ),
+        .library(
             name: "WebViewKit",
             targets: [
                 "WebViewKit",
@@ -33,11 +39,17 @@ var package = Package(
         .target(
             name: "TopPageFeature",
             dependencies: [
+                .target(name: "ScreenCoordinator"),
                 .target(name: "WebViewKit"),
             ]
         ),
         .target(
             name: "NotificationPageFeature",
+            dependencies: [
+            ]
+        ),
+        .target(
+            name: "ScreenCoordinator",
             dependencies: [
             ]
         ),

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import TopPageFeature
+import ScreenCoordinator
 import UserNotifications
 import Firebase
 import FirebaseMessaging
@@ -18,6 +19,7 @@ struct WebAppSample: App {
     var body: some Scene {
         WindowGroup {
             TopPageView(defaultUrl:"https://www.google.co.jp/")
+                .environmentObject(ScreenCoordinator())
         }
     }
 }
@@ -43,10 +45,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
    }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // トークンの登録に失敗
         print("Oh no! Failed to register for remote notifications with error \(error)")
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // トークンの登録に成功
         var readableToken: String = ""
         for i in 0..<deviceToken.count {
             readableToken += String(format: "%02.2hhx", deviceToken[i] as CVarArg)
@@ -71,10 +75,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
        completionHandler(.newData)
    }
 
-    // アプリがForeground時にPush通知を受信する処理
+
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // アプリがForeground時にPush通知を受信したとき
         let userInfo = notification.request.content.userInfo
         print(userInfo)
         completionHandler([[.banner, .list, .sound]])
@@ -84,15 +89,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                    didReceive response: UNNotificationResponse,
                                    withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
-        // 以下の用にしてnotification centerを使って通知し、
-        // view側では以下のメソッドを使って、処理を続行します。
-        // onReceive(NotificationCenter.default.publisher(for: Notification.Name("didReceiveRemoteNotification")))
-//        NotificationCenter.default.post(
-//            name: Notification.Name("didReceiveRemoteNotification"),
-//            object: nil,
-//            userInfo: userInfo
-//        )
         print(userInfo)
+
+//        let reciveContent = ReceiveContent(userInfo: userInfo)
+//        if let stringUrl = reciveContent.url, let url = URL(string: stringUrl) {
+//            UIApplication.shared.open(url)
+//        }
         completionHandler()
     }
 }

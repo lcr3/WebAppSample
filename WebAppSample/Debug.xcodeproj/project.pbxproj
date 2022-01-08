@@ -41,6 +41,7 @@
 		0F6CF81E27709585000D0051 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F6CF81F27709585000D0051 /* WebAppSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebAppSample.swift; path = iOS/WebAppSample.swift; sourceTree = "<group>"; };
 		0F6CF826277096AC000D0051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = iOS/Debug/Assets.xcassets; sourceTree = "<group>"; };
+		0FFBE397278ACAA0000616BF /* Debug-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Debug-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		0F6CF7DD27709495000D0051 = {
 			isa = PBXGroup;
 			children = (
+				0FFBE397278ACAA0000616BF /* Debug-Info.plist */,
 				0F3CD7A0277306A700C28C79 /* GoogleService-Info.plist */,
 				0F6CF81F27709585000D0051 /* WebAppSample.swift */,
 				0F6CF826277096AC000D0051 /* Assets.xcassets */,
@@ -413,7 +415,7 @@
 				DEVELOPMENT_TEAM = UUF7376KJL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "Debug-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,7 +450,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "Debug-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import ScreenCoordinator
 import WebViewKit
 
 public struct TopPageView: View {
+    @EnvironmentObject private var screenCoordinator: ScreenCoordinator
     @ObservedObject var stateModel: WebViewStateModel
 
     public init(defaultUrl: String) {
@@ -40,6 +42,10 @@ public struct TopPageView: View {
                     Text("Google")
                 }
             )
+            .onOpenURL { url in
+                let replaceUrl = url.absoluteString.replacingOccurrences(of: "lcrdev://", with:"")
+                stateModel.load(replaceUrl)
+            }
         }
     }
 }

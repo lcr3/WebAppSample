@@ -20,7 +20,7 @@ public struct Selection<T> {
 }
 
 public struct ReceiveContent {
-    let url: String?
+    public let url: String?
 
     public init(userInfo: [AnyHashable: Any]) {
         self.url = userInfo["url"] as? String

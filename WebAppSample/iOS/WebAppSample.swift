@@ -90,11 +90,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                    withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
         print(userInfo)
-
-//        let reciveContent = ReceiveContent(userInfo: userInfo)
-//        if let stringUrl = reciveContent.url, let url = URL(string: stringUrl) {
-//            UIApplication.shared.open(url)
-//        }
+        let reciveContent = ReceiveContent(userInfo: userInfo)
+        guard let urlString = reciveContent.url, let url = URL(string: urlString) else {
+            print("えらーーーーーー")
+            completionHandler()
+            return
+        }
+        UIApplication.shared.open(url)
         completionHandler()
     }
 }

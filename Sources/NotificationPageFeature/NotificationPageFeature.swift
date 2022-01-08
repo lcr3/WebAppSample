@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-public struct TopPageView: View {
-
+public struct NotificationPageView: View {
     public init() {
     }
 
@@ -18,3 +17,9 @@ public struct TopPageView: View {
         }
     }
 }
+
+struct NotificationPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        NotificationPageView()
+    }
+ }

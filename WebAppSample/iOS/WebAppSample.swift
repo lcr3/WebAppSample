@@ -18,8 +18,10 @@ struct WebAppSample: App {
 
     var body: some Scene {
         WindowGroup {
-            TopPageView(defaultUrl:"https://www.google.co.jp/")
-                .environmentObject(ScreenCoordinator())
+            TopPageView(
+                defaultUrl:"https://www.google.co.jp/",
+                deepLinkIdentifier: "lcrdev://"
+            ).environmentObject(ScreenCoordinator())
         }
     }
 }

@@ -23,14 +23,21 @@ public class WebViewStateModel: ObservableObject {
     @Published var error: WebViewError?
 
     private(set) var url: String
+    private let deepLinkIdentifier: String
 
-    public init(url: String) {
+    public init(url: String, deepLinkIdentifier: String) {
         self.url = url
+        self.deepLinkIdentifier = deepLinkIdentifier
     }
 
     public func load(_ url: String) {
         self.url = url
         shouldLoad = true
+    }
+
+    public func onOpenUrl(_ url: String) {
+        let openUrl = url.replacingOccurrences(of: deepLinkIdentifier, with:"")
+        load(openUrl)
     }
 }
 

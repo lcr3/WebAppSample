@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
-import ScreenCoordinator
 import WebViewKit
 
 public struct TopPageView: View {
-    @EnvironmentObject private var screenCoordinator: ScreenCoordinator
     @ObservedObject var stateModel: WebViewStateModel
 
-    public init(defaultUrl: String) {
-        self.stateModel = WebViewStateModel(url: defaultUrl)
+    public init(defaultUrl: String, deepLinkIdentifier: String) {
+        self.stateModel = WebViewStateModel(
+            url: defaultUrl,
+            deepLinkIdentifier: deepLinkIdentifier
+        )
     }
 
     public var body: some View {
@@ -43,8 +44,7 @@ public struct TopPageView: View {
                 }
             )
             .onOpenURL { url in
-                let replaceUrl = url.absoluteString.replacingOccurrences(of: "lcrdev://", with:"")
-                stateModel.load(replaceUrl)
+                stateModel.onOpenUrl(url.absoluteString)
             }
         }
     }

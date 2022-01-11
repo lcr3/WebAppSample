@@ -19,7 +19,6 @@ public class WebViewStateModel: ObservableObject {
     @Published public var shouldGoBack = false
     @Published public var shouldLoad = false
     @Published public var title = ""
-
     @Published var error: WebViewError?
 
     private(set) var url: String

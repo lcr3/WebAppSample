@@ -21,7 +21,7 @@ struct WebAppSample: App {
             TopPageView(
                 defaultUrl:"https://www.google.co.jp/",
                 deepLinkIdentifier: "lcrdev://"
-            ).environmentObject(ScreenCoordinator())
+            )
         }
     }
 }

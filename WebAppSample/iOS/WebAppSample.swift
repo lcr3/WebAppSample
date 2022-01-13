@@ -36,9 +36,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       // Push通知許可のポップアップを表示
       let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
       UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { granted, _ in
-         guard granted else {
-             return
-         }
+         guard granted else { return }
          DispatchQueue.main.async {
             application.registerForRemoteNotifications()
          }

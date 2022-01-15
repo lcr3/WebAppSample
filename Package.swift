@@ -17,13 +17,13 @@ var package = Package(
         .library(
             name: "NotificationPageFeature",
             targets: [
-                "NotificationPageFeature"
+                "NotificationPageFeature",
             ]
         ),
         .library(
             name: "ScreenCoordinator",
             targets: [
-                "ScreenCoordinator"
+                "ScreenCoordinator",
             ]
         ),
         .library(
@@ -31,7 +31,7 @@ var package = Package(
             targets: [
                 "WebViewKit",
             ]
-        )
+        ),
     ],
     dependencies: [
     ],
@@ -72,6 +72,6 @@ package.targets.append(
         .testTarget(
             name: "WebViewKitTests",
             dependencies: ["WebViewKit"]
-        )
+        ),
     ]
 )

@@ -1,6 +1,6 @@
 //
 //  WebViewKit.swift
-//  
+//
 //
 //  Created by lcr on 2021/12/20.
 //
@@ -35,7 +35,7 @@ public class WebViewStateModel: ObservableObject {
     }
 
     public func onOpenUrl(_ url: String) {
-        let openUrl = url.replacingOccurrences(of: deepLinkIdentifier, with:"")
+        let openUrl = url.replacingOccurrences(of: deepLinkIdentifier, with: "")
         load(openUrl)
     }
 }
@@ -52,7 +52,6 @@ public struct WebViewContainer: UIViewRepresentable {
     }
 
     public func makeUIView(context: Context) -> WKWebView {
-
         guard let url = URL(string: stateModel.url) else {
             return WKWebView()
         }
@@ -66,7 +65,7 @@ public struct WebViewContainer: UIViewRepresentable {
         return webView
     }
 
-    public func updateUIView(_ uiView: WKWebView, context: Context) {
+    public func updateUIView(_ uiView: WKWebView, context _: Context) {
         if stateModel.shouldGoBack {
             uiView.goBack()
             stateModel.shouldGoBack = false
@@ -91,22 +90,22 @@ public class Coordinator: NSObject, WKNavigationDelegate {
         self.stateModel = stateModel
     }
 
-    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_: WKWebView, didStartProvisionalNavigation _: WKNavigation!) {
         stateModel.isLoading = true
     }
 
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
         stateModel.isLoading = false
         stateModel.title = webView.title ?? ""
         stateModel.canGoBack = webView.canGoBack
     }
 
-    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    public func webView(_: WKWebView, didFail _: WKNavigation!, withError error: Error) {
         stateModel.isLoading = false
         setError(error)
     }
 
-    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    public func webView(_: WKWebView, didFailProvisionalNavigation _: WKNavigation!, withError error: Error) {
         stateModel.isLoading = false
         setError(error)
     }

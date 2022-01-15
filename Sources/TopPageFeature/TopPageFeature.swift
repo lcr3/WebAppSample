@@ -1,6 +1,6 @@
 //
 //  TopPageFeature.swift
-//  
+//
 //
 //  Created by lcr on 2021/12/20.
 //
@@ -12,7 +12,7 @@ public struct TopPageView: View {
     @ObservedObject var stateModel: WebViewStateModel
 
     public init(defaultUrl: String, deepLinkIdentifier: String) {
-        self.stateModel = WebViewStateModel(
+        stateModel = WebViewStateModel(
             url: defaultUrl,
             deepLinkIdentifier: deepLinkIdentifier
         )
